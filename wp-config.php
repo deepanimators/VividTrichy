@@ -86,13 +86,13 @@ define('WP_ALLOW_MULTISITE', true);
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', true );
+	define( 'WP_DEBUG', false );
 }
 
-define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_LOG', false );
 define( 'SCRIPT_DEBUG', false );
 define( 'SAVEQUERIES', false );
-define( 'WP_DEBUG_DISPLAY', true );
+define( 'WP_DEBUG_DISPLAY', false );
 define( 'DISALLOW_FILE_EDIT', true );
 define( 'CONCATENATE_SCRIPTS', false );
 /* That's all, stop editing! Happy publishing. */
