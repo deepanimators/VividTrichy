@@ -1,0 +1,165 @@
+#secondary-nav{
+	padding: 0;
+	position: relative;
+	z-index: 2;
+}
+#secondary-nav .menu{
+	padding: 0;
+	margin: 0;
+}
+#secondary-nav .menu > .menu-item{
+	display: block;
+	text-align: center;
+	width: 25%;
+	position: relative;
+	float: left;
+}
+#secondary-nav .menu > .menu-item > a{
+	padding: 2px 0;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 1em;
+	display: block;
+	border-right: 1px solid;
+	margin: 1.5rem 0;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+#secondary-nav .menu > .menu-item:first-child > a{
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+#secondary-nav .menu > .menu-item > a > small{
+	font-size: 85%;
+	line-height: 1.6;
+	font-weight: 300;
+	font-style: normal;
+	display: block;
+	opacity: 0.65;
+}
+#secondary-nav .sub-menu{
+	display: block;
+	opacity: 0;
+	visibility: hidden;
+	list-style: none;
+	position: absolute;
+	margin: -7px 0 0 0;
+	padding: 15px 28px 28px 28px;
+	width: 550px;
+	min-height: 300px;
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.42);
+	background-size: cover;
+	border: 7px solid;
+	text-align: left;
+	overflow: auto;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	z-index: 1;
+	border-color: #fff;
+}
+#secondary-nav .menu-item:hover > .sub-menu{
+	visibility: visible;
+	opacity: 1;
+}
+#secondary-nav .sub-menu:before{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 1%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.8)), color-stop(1%,rgba(0,0,0,0.8)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 1%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 1%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 1%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 1%,rgba(0,0,0,0) 100%); /* W3C */
+	z-index: 0;
+	top: 0;
+	left: 0;
+}
+#secondary-nav .sub-menu .menu-item > a{
+	z-index: 1;
+	position: relative;
+	text-decoration: none;
+	display: block;
+	padding: 8px 0;
+	max-width: 200px;
+	text-transform: none;
+	font-weight: 300;
+	font-size: 85%;
+	border-bottom: 1px solid rgba(255, 255, 255, .25);
+	color: #fff;
+}
+#secondary-nav .sub-menu .menu-item > a:hover{
+	opacity: 0.65;
+}
+#secondary-nav .sub-menu .menu-item:last-child > a {
+	border-bottom: none;
+}
+@media (max-width:767px) {
+	#secondary-nav .menu{
+		display: none;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		left: 0;
+		padding: 0;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+		margin-top: 5rem;
+	}
+	#secondary-nav .menu > .menu-item{
+		float: none;
+		width: 100% !important;
+		border-bottom: 1px solid;
+	}
+	#secondary-nav .menu > .menu-item > a,
+	#secondary-nav .menu > .menu-item > a em{
+		text-shadow: none;
+		border-left: none !important;
+		border-right: none !important;
+	}
+	#secondary-nav .menu > .menu-item > a:hover,
+	#secondary-nav .menu > .menu-item > a:hover em{
+		opacity: 0.65;
+	}
+	#secondary-nav .sub-menu{
+		display: none;
+		position: static !important;
+		border: none;
+		box-shadow: none;
+		width: 100%;
+		height: auto;
+		min-height: inherit;
+		padding: 0;
+		top: 100%;
+		box-shadow: inset 0 px 3px rgba(0, 0, 0, 0.65);
+		border-radius: 0;
+		background-size: cover;
+		visibility: visible;
+		opacity: 1;
+	}
+	#secondary-nav .menu-item:hover > .sub-menu{
+		display: block;
+	}
+	#secondary-nav .sub-menu:before{
+		display: none;
+	}
+	#secondary-nav .sub-menu > .menu-item{
+		display: block;
+	}
+	#secondary-nav .sub-menu > .menu-item > a{
+		padding: 20px ;
+		border-bottom: 1px solid rgba(255, 255, 255, .15);
+		width: 100%;
+		max-width: 100% !important;
+		text-align: center;
+		background-color: rgba(0, 0, 0, .75);
+	}
+	#secondary-nav .sub-menu > .menu-item > a:hover{
+		background-color: rgba(0, 0, 0, .65);
+		color: #fff;
+	}
+	#secondary-nav #toggle-secondary-nav:checked + .menu{
+		display: block;
+	}
+}

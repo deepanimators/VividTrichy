@@ -1,0 +1,155 @@
+#content{
+	margin: 0 auto;
+}
+.wrapper-content-padding #content{
+	padding-bottom: 9.8rem;
+	padding-top: 9.8rem;
+}
+.layout-content-inherit,
+.layout-content-boxed{
+	
+	&.layout-content-size-inherit{
+		
+		&.layout-boxed{
+			
+			&.layout-size-wide{
+			
+				#content{
+					@include layout_size($layout_wide + 270);
+					
+					.main-wrapper{
+						@include layout_size($layout_wide);
+					}
+					
+				}
+				
+			}
+			
+			&.layout-size-narrow{
+				
+				#content{
+					@include layout_size($layout_narrow + 110);
+					
+					.main-wrapper{
+						@include layout_size($layout_narrow);
+					}
+				}
+				
+			}
+			
+		}
+		
+		&.layout-full{
+			
+			&.layout-size-wide{
+			
+				#content .main-wrapper{
+					@include layout_size($layout_wide);
+				}
+				
+			}
+			
+			&.layout-size-narrow{
+				
+				#content .main-wrapper{
+					@include layout_size($layout_narrow);
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	&.layout-content-size-wide{
+		
+		#content{
+			@include layout_size($layout_wide + 270);
+			
+			.main-wrapper{
+				@include layout_size($layout_wide);
+			}
+			
+		}
+		
+	}
+	
+	&.layout-content-size-narrow{
+		
+		#content{
+			@include layout_size($layout_narrow + 110);
+			
+			.main-wrapper{
+				@include layout_size($layout_narrow);
+			}
+			
+		}
+		
+	}
+}
+.layout-content-inherit.layout-boxed,
+.layout-content-boxed{
+	
+	&.layout-content-size-wide,
+	&.layout-content-size-full,
+	&.layout-content-size-inherit.layout-size-wide,
+	&.layout-content-size-inherit.layout-size-full{
+		
+		#content{
+			@include layout_size($layout_wide + 270);
+		}
+		
+	}
+	
+	&.layout-content-size-narrow,
+	&.layout-content-size-inherit.layout-size-narrow{
+		
+		#content{
+			@include layout_size($layout_narrow + 110);
+		}
+		
+	}
+	
+}
+/*
+.layout-content-full,
+.layout-content-inherit.layout-full{
+	
+	&.layout-content-size-inherit{
+		
+		&.layout-size-wide{
+			
+			#content .main-wrapper{
+				padding: 0 55px;
+			}
+			
+		}
+		
+		&.layout-size-narrow{
+			
+			#content .main-wrapper{
+				padding: 0 135px;
+			}
+			
+		}
+		
+	}
+	
+	&.layout-content-size-wide{
+		
+		#content .main-wrapper{
+			padding: 0 55px;
+		}
+		
+	}
+	
+	&.layout-content-size-narrow{
+		
+		#content .main-wrapper{
+			padding: 0 135px;
+		}
+		
+	}
+	
+}
+*/

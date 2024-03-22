@@ -1,0 +1,28 @@
+.absolute-header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-weight: 300;
+  position: relative;
+  line-height: 1.6;
+  z-index: 1; }
+  .absolute-header .fa {
+    margin-right: .5rem;
+    font-size: larger; }
+  .absolute-header .simple-weather {
+    line-height: 1.6;
+    display: inline-block; }
+    .absolute-header .simple-weather span {
+      text-transform: uppercase;
+      display: inline-block;
+      margin-left: 1.5rem; }
+      .absolute-header .simple-weather span:first-of-type {
+        margin-left: 0; }
+    .absolute-header .simple-weather i {
+      margin: 0 0.35rem;
+      line-height: 1;
+      display: inline-block; }
+      .absolute-header .simple-weather i::before {
+        line-height: 0;
+        bottom: -5px;
+        position: relative;
+        font-size: 2.2rem; }

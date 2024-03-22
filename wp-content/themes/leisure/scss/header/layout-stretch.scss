@@ -1,0 +1,39 @@
+.layout-header-stretch{
+	
+	&.layout-header-size-inherit{
+		
+		&.layout-size-wide{
+			
+			.main-wrapper{
+				@include layout_size($layout_wide);
+			}
+			
+		}
+		
+		&.layout-size-narrow{
+			
+			.main-wrapper{
+				@include layout_size($layout_narrow);
+			}
+			
+		}
+		
+	}
+	
+	&.layout-header-size-wide{
+		
+		.main-wrapper{
+			@include layout_size($layout_wide);
+		}
+		
+	}
+	
+	&.layout-header-size-narrow{
+		
+		.main-wrapper{
+			@include layout_size($layout_narrow);
+		}
+		
+	}
+	
+}

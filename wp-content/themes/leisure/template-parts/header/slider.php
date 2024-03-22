@@ -1,0 +1,1 @@
+<?php do_action( 'curly_header_slider', $slider ); ?>

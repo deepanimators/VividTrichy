@@ -1,0 +1,30 @@
+.simple-weather-settings-form {
+  padding: 40px  40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 20px !important;
+  -webkit-box-shadow: 1rem 1rem 2rem -0.5rem rgba(0, 0, 0, 0.075);
+          box-shadow: 1rem 1rem 2rem -0.5rem rgba(0, 0, 0, 0.075); }
+  .simple-weather-settings-form input {
+    margin: 0; }
+    .simple-weather-settings-form input[type=text] {
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      border-color: #BFCBD9; }
+  .simple-weather-settings-form .el-form-item__label {
+    padding-right: 30px; }
+  .simple-weather-settings-form .el-switch input[type=checkbox] {
+    display: none; }
+  .simple-weather-settings-form small {
+    line-height: 1.4;
+    display: block;
+    margin-top: 10px; }
+
+[v-cloak] {
+  opacity: 0; }
+
+.wrap#app {
+  margin-top: 60px !important; }
+  .wrap#app h1 {
+    text-align: center; }

@@ -1,0 +1,42 @@
+.simple-weather-settings-form{
+  padding: 40px  40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 20px !important;
+  box-shadow: 1rem 1rem 2rem -0.5rem rgba(0,0,0,0.075);
+
+  input{
+    margin: 0;
+
+    &[type=text]{
+      box-shadow: none;
+      border-color: #BFCBD9;
+    }
+  }
+
+  .el-form-item__label{
+    padding-right: 30px;
+  }
+  .el-switch{
+    input[type=checkbox]{
+      display: none;
+    }
+  }
+  small{
+    line-height: 1.4;
+    display: block;
+    margin-top: 10px;
+  }
+}
+[v-cloak]{
+  opacity: 0;
+}
+.wrap#app{
+  margin-top: 60px !important;
+
+  h1{
+    text-align: center;
+  }
+
+}

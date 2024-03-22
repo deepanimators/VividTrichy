@@ -1,0 +1,165 @@
+#footer{
+	margin: 0 auto;
+}
+
+/* !Footer Boxed */
+.layout-footer-inherit.layout-boxed,
+.layout-footer-boxed{
+	
+	&.layout-footer-size-inherit{
+		
+		&.layout-size-wide{
+			
+			#footer{
+				@include layout_size($layout_wide + 270);
+				
+				.main-wrapper{
+					@include layout_size($layout_wide);
+				}
+				
+			}
+			
+		}
+		
+		&.layout-size-narrow{
+			
+			#footer{
+				@include layout_size($layout_narrow + 110);
+				
+				.main-wrapper{
+					@include layout_size($layout_narrow);
+				}
+			}
+			
+		}
+		
+		&.layout-size-full{
+			
+			#footer{
+				@include layout_size($layout_wide + 270);
+				
+			}
+			
+		}
+		
+	}
+	
+	&.layout-footer-size-wide{
+		
+		#footer{
+			@include layout_size($layout_wide + 270);
+			
+			.main-wrapper{
+				@include layout_size($layout_wide);
+			}
+			
+		}
+		
+	}
+	
+	&.layout-footer-size-narrow{
+		
+		#footer{
+			@include layout_size($layout_narrow + 110);
+			
+			.main-wrapper{
+				@include layout_size($layout_narrow);
+			}
+			
+		}
+		
+	}
+	
+	&.layout-footer-size-full{
+		
+		#footer{
+			@include layout_size($layout_wide + 270);
+			
+		}
+		
+	}
+	
+}
+
+/* !Footer Stretch */
+.layout-footer-stretch{
+	
+	&.layout-footer-size-inherit{
+		
+		&.layout-size-wide{
+			
+			#footer .main-wrapper{
+				@include layout_size($layout_wide);
+			}
+			
+		}
+		
+		&.layout-size-narrow{
+			
+			#footer .main-wrapper{
+				@include layout_size($layout_narrow);
+			}
+			
+		}
+		
+	}
+	
+	&.layout-footer-size-wide{
+		
+		#footer .main-wrapper{
+			@include layout_size($layout_wide);
+		}
+		
+	}
+	
+	&.layout-footer-size-narrow{
+		
+		#footer .main-wrapper{
+			@include layout_size($layout_narrow);
+		}
+		
+	}
+	
+}
+
+/* !Footer Full */
+.layout-footer-full,
+.layout-footer-inherit.layout-full{
+	
+	&.layout-footer-size-inherit{
+		
+		&.layout-size-wide{
+			
+			#footer .main-wrapper{
+				padding: 0 55px;
+			}
+			
+		}
+		
+		&.layout-size-narrow{
+			
+			#footer .main-wrapper{
+				padding: 0 135px;
+			}
+			
+		}
+		
+	}
+	
+	&.layout-footer-size-wide{
+		
+		#footer .main-wrapper{
+			padding: 0 55px;
+		}
+		
+	}
+	
+	&.layout-footer-size-narrow{
+		
+		#footer .main-wrapper{
+			padding: 0 135px;
+		}
+		
+	}
+	
+}

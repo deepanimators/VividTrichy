@@ -1,0 +1,30 @@
+#vc_license-activation-notice,
+.vc_license-activation-notice,
+div[class*=vc_license],
+div[class*=activation-notice],
+.rs-update-notice-wrap.rs-update-notice-wrap.rs-update-notice-wrap.rs-update-notice-wrap.rs-update-notice-wrap,
+div[id*=nf-admin-notice]{
+	display: none !important;
+}
+
+#the-list{
+
+	tr[data-slug="slider-revolution"]{
+
+		& + .plugin-update-tr,
+		& + .plugin-update-tr + .plugin-update-tr,
+		& + .plugin-update-tr + .plugin-update-tr + .plugin-update-tr{
+			display: none !important;
+		}
+
+	}
+
+}
+
+.curly_inputs_group{
+	.vc_checkbox-label{
+		margin-right: 10px;
+		margin-bottom: 5px;
+		display: inline-block;
+	}
+}

@@ -1,0 +1,307 @@
+$sw-prefix:		simple-weather;
+
+body:not(.logged-in) .simple-weather .error{
+	opacity: 0 !important;
+}
+
+/** Shortcode */
+.#{$sw-prefix}{
+	line-height: 1.5;
+	display: inline-block;
+
+	&__day{
+		display: inline-block;
+		margin-right: 2em;
+
+		&:last-of-type{
+			margin-right: auto;
+		}
+	}
+
+	.sw{
+		margin: 0 .15em 0 .625em;
+
+		&::before{
+			font-size: 1.2em;
+			font-style: normal;
+			position: relative;
+		}
+
+	}
+
+	&__temp{
+		font-size: 1em;
+		font-style: normal;
+		line-height: 1;
+	}
+
+	&__temp-min{
+		font-size: 1em;
+		font-style: normal;
+		line-height: 1;
+
+		&::before{
+			content: ' / ';
+		}
+	}
+
+	&--view-widget{
+		display: block;
+
+
+	}
+
+	&--view-blocks{
+
+		.#{$sw-prefix}__date{
+			display: block;
+		}
+		.#{$sw-prefix}__day{
+			padding-left: .25em;
+			padding-right: .25em;
+		}
+
+		&.#{$sw-prefix}--hidden-date{
+
+			.sw{
+				display: block;
+				font-size: 1.4em;
+				margin-bottom: .5em;
+				margin-right: auto;
+			}
+
+		}
+
+	}
+
+	&--view-large-icons{
+
+		.#{$sw-prefix}__day{
+			padding-left: 3.5em;
+			min-height: 2.5em;
+			position: relative;
+		}
+
+		.#{$sw-prefix}__temp{
+			display: block;
+		}
+
+		.#{$sw-prefix}__temp-min{
+			opacity: .5;
+			margin-top: .25em;
+
+			&::before{
+				content: ' / ';
+			}
+		}
+
+		.sw{
+			font-size: 1.6em;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			position: absolute;
+			margin: 0;
+
+			&::before{
+				top:auto;
+			}
+		}
+
+		.#{$sw-prefix}__date{
+			font-size: .7em;
+			text-transform: uppercase;
+			font-weight: bold;
+			display: block;
+		}
+
+	}
+
+	&--display-block{
+		display: block;
+	}
+
+	&--text-center{
+		text-align: center;
+
+		&.#{$sw-prefix} .sw{
+			margin-left: 0;
+		}
+
+	}
+
+
+}
+
+
+
+
+/** Simple Weather Widget */
+.#{$sw-prefix}-widget{
+	text-align: center;
+	border-radius: 3px;
+
+	&--bg{
+		padding: 2em 2em 1em;
+
+		.widget_title{
+			color: inherit;
+		}
+	}
+
+	em{
+		font-style: normal;
+	}
+
+	.widget_title{
+		margin: 0 0 .25em 0;
+	}
+
+	.summary{
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		opacity: .65;
+		position: relative;
+		display: inline-block;
+		padding-top: 2em;
+		font-size: 11px;
+
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 1.5em;
+			left: 50%;
+			width: 7em;
+			transform: translateX(-50%);
+			border-top: 1px solid currentColor;
+			opacity: .25;
+		}
+	}
+
+	.temp{
+		margin-top: 1rem;
+		position: relative;
+	}
+
+	.degrees{
+		font-size: 48px !important;
+		display: block;
+		letter-spacing: -0.075em;
+		transition: all 200ms ease;
+		position: relative;
+		line-height: 1;
+	}
+
+	.details{
+		margin: 0 auto;
+		display: none;
+		opacity: 0;
+		transition: all 200ms ease;
+		visibility: hidden;
+		font-size: 11px !important;
+		line-height: 1.5;
+		max-width: 160px;
+		text-align: left;
+	}
+
+	.float-right{
+		float: right;
+	}
+
+	&:hover{
+
+		.degrees{
+			opacity: 0;
+			bottom: 100%;
+			height: 0;
+			visibility: hidden;
+			display: none;
+		}
+
+		.details{
+			opacity: 1;
+			visibility: visible;
+			display: block;
+		}
+
+	}
+
+	&--with-background{
+		padding: 1.5em;
+
+		.widget_title{
+			margin: 1.5em 0 1em;
+		}
+
+	}
+
+	&--with-color{
+
+		.widget_title{
+			color: inherit;
+		}
+
+	}
+
+}
+
+.#{$sw-prefix}-table{
+	text-align: left;
+	width: 100%;
+	margin: 1.5em auto;
+	display: flex;
+	flex-direction: column;
+
+	&__row{
+		display: flex;
+		padding: .5em 0;
+		position: relative;
+		width: 100%;
+
+		& + &::before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			border-top: 1px solid currentColor;
+			opacity: .125;
+		}
+
+	}
+
+	&__date{
+		flex-grow: 3;
+		flex-basis: 60%;
+	}
+
+	&__temp{
+		flex-shrink: 0;
+		white-space: nowrap;
+		text-align: right;
+		flex-basis: 17.5%;
+	}
+
+	&__icon{
+		flex-basis: 5%;
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	&__temp-min{
+		margin-left: auto;
+		opacity: 0.65;
+	}
+
+	.sw{
+		font-size: 1.1em;
+		margin: 0;
+		position: relative;
+		margin-right: .5em;
+	}
+
+}
+
+@import 'weather-icons';
